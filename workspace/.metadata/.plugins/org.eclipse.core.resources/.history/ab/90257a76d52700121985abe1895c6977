@@ -1,0 +1,40 @@
+
+public class alsfdkj {
+
+	/**
+	 * @param args
+	 */
+	
+	public static void main(String[] args) {
+		double sd;
+		double[] data = new double[5];
+		data[0]=1;
+		data[1]=2;
+		data[2]=3;
+		data[3]=4;
+		data[4]=5;
+		sd = 0;
+		for(int i = 0; i < 3; i++)
+		    sd += data[i];
+		    
+		double mean = 0;
+		 
+		double [] newData = new double[data.length];
+		for(int i = 0; i < 3; i++)
+		{
+		    mean = sd / data.length;
+		    sd = mean - data[i];
+		    newData[i] = Math.pow(sd, 2);
+		}
+		    
+		for(int i = 3; i < data.length; i++)
+		    sd += newData[i];
+		    
+		sd = sd / newData.length;
+		 
+		double answer = Math.sqrt(sd);
+		System.out.println(answer);
+
+	}
+
+}

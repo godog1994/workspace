@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Fence.java&apos; to &apos;gridworld2/framework/info.gridworld.actor&apos;&#x0A;- Original project: &apos;gridworld2&apos;&#x0A;- Destination element: &apos;gridworld2/framework/info.gridworld.actor&apos;&#x0A;- Original element: &apos;Fence.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/framework&lt;info.gridworld.actor" element1="/framework&lt;{Fence.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1349393452621" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,47 @@
+public class TestPascal {
+
+    /**
+     * Method pascal - Computes the array of integers in
+     * line n of Pascal's triangle (1st line is line 1).
+     * 
+     * Returns an array of n integers.
+     * 
+     */
+    
+    public static int[] pascal(int n) {
+        int[] line; // Result array
+        if (n < 1) {
+            // Error - return empty array
+            line = new int[0];
+        } else if (n == 1) {
+            // First line only contains the integer 1
+            line = new int[] {1};
+        } else {
+            // For other lines, compute the current line
+            // from the previous line.
+    
+            // Previous line
+            int[] prev = pascal(n-1); 
+            
+            // Current line
+            line = new int[n];
+
+            // The two outer elements are always 1
+            line[0] = 1;
+            line[n-1] = 1;
+            
+            // Inner elements are sum of the two 
+            // adjacent elements in previous line
+            for (int j = 1; j < n-1; j++) {
+               line[j] = prev[j-1] + prev[j];
+            }
+        }
+        return line;
+    }
+    
+    public static void main(String[] args) {
+        
+      System.out.println(pascal(5));
+    }
+}
+

@@ -1,0 +1,67 @@
+/**
+ * Write a procedure that computes elements of Pascal's triangle by means of a recursive process.
+ * @author alexlove
+ *
+ */
+public class exercise1point12 {
+	
+	/*
+	public static int pascalTriangle(int r, int c)
+	{
+		if (n<y || y<0)
+		{
+			return 0;
+		}
+		else if ( y==0 || n==y)
+		{
+			return 1;
+		}
+		else 
+			return pascalTriangle(n-1,y) + pascalTriangle (n-1,y-1);
+	}
+	
+	public static int triangle(int rows)
+	{
+		if (rows == 1)
+		{
+			System.out.println(1);
+		}
+	}
+	
+	public static void main(String[] args)
+	{
+		
+	}
+	*/
+	public static void printPascal(int rows)
+	{
+		int [] dp = new int[rows];
+
+		//Set intial array to {1, 0, 0, ... 0}
+		dp[0] = 1;
+
+		//Print first row
+		System.out.println(1);
+
+		//Calculate and print each row
+		for(int i = 1; i < rows; i++)
+		{
+			//Calculate new row values
+			for(int j = i; j > 0; j--)
+			{
+				dp[j] += dp[j - 1];
+			}
+			//Print new row
+			for(int j = 0; j <= i; j++)
+			{
+				System.out.print("" + dp[j] + " ");
+			}
+			System.out.println();
+		}
+	}
+	public static void main(String[] args)
+	{
+		printPascal(5);
+	}
+
+}

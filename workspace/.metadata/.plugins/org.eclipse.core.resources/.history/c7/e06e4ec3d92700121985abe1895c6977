@@ -1,0 +1,27 @@
+/**
+ * Write a procedure that computes elements of Pascal's triangle by means of a recursive process.
+ * @author alexlove
+ *
+ */
+public class exercise1point12 {
+	
+	public static int pascalTriangle(int n, int y)
+	{
+		if (n<y || y<0)
+		{
+			return 0;
+		}
+		else if ( y==0 || n==y)
+		{
+			return 1;
+		}
+		else 
+			return pascalTriangle(n-1,y) + pascalTriangle (n-1,y-1);
+	}
+	
+	public static void main(String[] args)
+	{
+		System.out.println(pascalTriangle(5,0));
+	}
+
+}
